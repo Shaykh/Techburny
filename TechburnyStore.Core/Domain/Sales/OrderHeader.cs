@@ -1,3 +1,8 @@
+using System;
+using System.Collections.ObjectModel;
+using TechburnyStore.Core.Domain.Dbo;
+using TechburnyStore.Core.Domain.HumanResources;
+
 namespace TechburnyStore.Core.Domain.Sales
 {
     public class OrderHeader : AuditableEntity

@@ -2,7 +2,7 @@ using System.Collections.ObjectModel;
 
 namespace TechburnyStore.Core.Domain.Sales
 {
-    public class Customer : AuditableEntity
+    public class Shipper : AuditableEntity
     {
         public int? ID { get; set; }
 
@@ -11,15 +11,5 @@ namespace TechburnyStore.Core.Domain.Sales
         public string ContactName { get; set; }
 
         public virtual Collection<OrderHeader> Orders { get; set; }
-
-        public Customer()
-        {
-        }
-
-        public Customer(int? id)
-        {
-            ID = id;
-        }
-
     }
 }

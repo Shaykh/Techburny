@@ -1,3 +1,5 @@
+using TechburnyStore.Core.Domain.Warehouse;
+
 namespace TechburnyStore.Core.Domain.Sales
 {
     public class OrderDetail : AuditableEntity
