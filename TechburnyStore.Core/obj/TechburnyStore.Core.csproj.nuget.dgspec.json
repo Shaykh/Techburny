@@ -17,13 +17,13 @@
           "C:\\Users\\frue69215\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp2.2"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp2.2": {
             "projectReferences": {}
           }
         },
@@ -34,12 +34,16 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netcoreapp2.2": {
           "dependencies": {
-            "NETStandard.Library": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.0.3, )",
+              "version": "[2.2.0, )",
               "autoReferenced": true
             }
           },
