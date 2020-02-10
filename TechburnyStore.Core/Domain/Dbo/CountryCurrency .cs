@@ -2,7 +2,7 @@ using System;
 
 namespace TechburnyStore.Core.Domain.Dbo
 {
-    public class CountryCurrency : IAuditableEntity
+    public class CountryCurrency : AuditableEntity
     {
         public int? ID { get; set; }
 
@@ -10,14 +10,5 @@ namespace TechburnyStore.Core.Domain.Dbo
 
         public string CurrencyID { get; set; }
 
-        public string CreationUser { get; set; }
-
-        public DateTime? CreationDateTime { get; set; }
-
-        public string LastUpdateUser { get; set; }
-
-        public DateTime? LastUpdateDateTime { get; set; }
-
-        public byte[] Timestamp { get; set; }
     }
 }
