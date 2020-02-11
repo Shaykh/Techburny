@@ -2,7 +2,7 @@ using System;
 
 namespace TechburnyStore.Core.Domain
 {
-    public class AuditableEntity
+    public interface IAuditableEntity
     {
         string  CreationUser { get; set; }
 
@@ -12,6 +12,5 @@ namespace TechburnyStore.Core.Domain
 
         DateTime? LastUpdateDateTime { get; set; }
 
-        public byte[] Timestamp { get; set; }
     }
 }

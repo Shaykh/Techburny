@@ -1,9 +1,10 @@
+using System;
 using System.Collections.ObjectModel;
 using TechburnyStore.Core.Domain.Sales;
 
 namespace TechburnyStore.Core.Domain.Warehouse
 {
-    public class Product : AuditableEntity
+    public class Product : IAuditableEntity
     {
         public int? ID { get; set; }
 
@@ -18,6 +19,16 @@ namespace TechburnyStore.Core.Domain.Warehouse
         public bool? Discontinued { get; set; }
 
         public int? Stocks { get; set; }
+
+        public string  CreationUser { get; set; }
+
+        public DateTime? CreationDateTime { get; set; }
+
+        public string  LastUpdateUser { get; set; }
+
+        public DateTime? LastUpdateDateTime { get; set; }
+
+        public byte[] Timestamp { get; set; }
 
         public ProductCategory ProductCategoryFk { get; set; }
 

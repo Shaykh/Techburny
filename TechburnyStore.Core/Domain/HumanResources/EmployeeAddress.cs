@@ -2,7 +2,7 @@ using System;
 
 namespace TechburnyStore.Core.Domain.HumanResources
 {
-    public class EmployeeAddress : AuditableEntity
+    public class EmployeeAddress : IAuditableEntity
     {
         public int? ID { get; set; }
 
@@ -21,6 +21,16 @@ namespace TechburnyStore.Core.Domain.HumanResources
         public int? CountryID { get; set; }
 
         public string PhoneNumber { get; set; }
+
+        public string  CreationUser { get; set; }
+
+        public DateTime? CreationDateTime { get; set; }
+
+        public string  LastUpdateUser { get; set; }
+
+        public DateTime? LastUpdateDateTime { get; set; }
+
+        public byte[] Timestamp { get; set; }
 
     }
 }

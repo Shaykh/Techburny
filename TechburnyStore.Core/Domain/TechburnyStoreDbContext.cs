@@ -1,15 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using TechburnyStore.Core.Domain.Dbo;
+using TechburnyStore.Core.Domain.HumanResources;
+using TechburnyStore.Core.Domain.Sales;
+using TechburnyStore.Core.Domain.Warehouse;
 
 namespace TechburnyStore.Core.Domain
 {
-    public class OnlineStoreDbContext : DbContext
+    public class TechburnyStoreDbContext : DbContext
     {
-        public OnlineStoreDbContext(DbContextOptions<OnlineStoreDbContext> options)
+        public TechburnyStoreDbContext(DbContextOptions<TechburnyStoreDbContext> options)
             : base(options)
         {
         }
-        
+
         public DbSet<ChangeLog> ChangeLogs { get; set; }
 
         public DbSet<ChangeLogExclusion> ChangeLogExclusions { get; set; }
@@ -21,7 +24,7 @@ namespace TechburnyStore.Core.Domain
         public DbSet<Currency> Currencies { get; set; }
 
         public DbSet<EventLog> EventLogs { get; set; }
-        /*
+        
         public DbSet<Employee> Employees { get; set; }
 
         public DbSet<EmployeeAddress> EmployeeAddresses { get; set; }
@@ -34,7 +37,7 @@ namespace TechburnyStore.Core.Domain
 
         public DbSet<Product> Products { get; set; }
 
-        public DbSet<ProductUnitPriceHistory> ProductUnitPriceHistories { get; set; }
+        public DbSet<ProductUnitPrice> ProductUnitPrices { get; set; }
 
         public DbSet<Location> Locations { get; set; }
 
@@ -51,7 +54,7 @@ namespace TechburnyStore.Core.Domain
         public DbSet<PaymentMethod> PaymentMethods { get; set; }
 
         public DbSet<Shipper> Shippers { get; set; }
-
+        /*
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Apply all configurations

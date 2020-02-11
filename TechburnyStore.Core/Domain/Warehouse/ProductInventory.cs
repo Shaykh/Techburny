@@ -1,6 +1,8 @@
+using System;
+
 namespace TechburnyStore.Core.Domain.Warehouse
 {
-    public class ProductInventory : AuditableEntity
+    public class ProductInventory : IAuditableEntity
     {
         public int? ID { get; set; }
 
@@ -11,6 +13,16 @@ namespace TechburnyStore.Core.Domain.Warehouse
         public long? OrderDetailID { get; set; }
 
         public int? Quantity { get; set; }
+
+        public string  CreationUser { get; set; }
+
+        public DateTime? CreationDateTime { get; set; }
+
+        public string  LastUpdateUser { get; set; }
+
+        public DateTime? LastUpdateDateTime { get; set; }
+
+        public byte[] Timestamp { get; set; }
 
         public Product ProductFk { get; set; }
 

@@ -1,8 +1,9 @@
+using System;
 using TechburnyStore.Core.Domain.Warehouse;
 
 namespace TechburnyStore.Core.Domain.Sales
 {
-    public class OrderDetail : AuditableEntity
+    public class OrderDetail : IAuditableEntity
     {
         public long? ID { get; set; }
 
@@ -17,6 +18,16 @@ namespace TechburnyStore.Core.Domain.Sales
         public int? Quantity { get; set; }
 
         public decimal? Total { get; set; }
+
+        public string  CreationUser { get; set; }
+
+        public DateTime? CreationDateTime { get; set; }
+
+        public string  LastUpdateUser { get; set; }
+
+        public DateTime? LastUpdateDateTime { get; set; }
+
+        public byte[] Timestamp { get; set; }
 
         public OrderHeader OrderFk { get; set; }
 

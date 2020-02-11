@@ -5,7 +5,7 @@ using TechburnyStore.Core.Domain.HumanResources;
 
 namespace TechburnyStore.Core.Domain.Sales
 {
-    public class OrderHeader : AuditableEntity
+    public class OrderHeader : IAuditableEntity
     {
         public long? ID { get; set; }
 
@@ -30,6 +30,16 @@ namespace TechburnyStore.Core.Domain.Sales
         public long? ReferenceOrderID { get; set; }
 
         public string Comments { get; set; }
+
+        public string  CreationUser { get; set; }
+
+        public DateTime? CreationDateTime { get; set; }
+
+        public string  LastUpdateUser { get; set; }
+
+        public DateTime? LastUpdateDateTime { get; set; }
+
+        public byte[] Timestamp { get; set; }
 
         public virtual OrderStatus OrderStatusFk { get; set; }
 
