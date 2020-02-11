@@ -2,7 +2,7 @@ using System;
 
 namespace TechburnyStore.Core.Domain
 {
-    public interface IAuditableEntity
+    public interface IAuditableEntity : IEntity
     {
         string  CreationUser { get; set; }
 

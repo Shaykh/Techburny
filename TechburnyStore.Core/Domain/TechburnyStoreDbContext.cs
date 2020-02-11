@@ -1,4 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using TechburnyStore.Core.Domain.Configurations.Dbo;
+using TechburnyStore.Core.Domain.Configurations.HumanResources;
+using TechburnyStore.Core.Domain.Configurations.Sales;
+using TechburnyStore.Core.Domain.Configurations.Warehouse;
 using TechburnyStore.Core.Domain.Dbo;
 using TechburnyStore.Core.Domain.HumanResources;
 using TechburnyStore.Core.Domain.Sales;
@@ -54,7 +58,7 @@ namespace TechburnyStore.Core.Domain
         public DbSet<PaymentMethod> PaymentMethods { get; set; }
 
         public DbSet<Shipper> Shippers { get; set; }
-        /*
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Apply all configurations
@@ -77,7 +81,7 @@ namespace TechburnyStore.Core.Domain
             modelBuilder
                 .ApplyConfiguration(new ProductCategoryConfiguration())
                 .ApplyConfiguration(new ProductConfiguration())
-                .ApplyConfiguration(new ProductUnitPriceHistoryConfiguration())
+                .ApplyConfiguration(new ProductUnitPriceConfiguration())
                 .ApplyConfiguration(new ProductInventoryConfiguration())
                 .ApplyConfiguration(new LocationConfiguration())
                 ;
@@ -94,6 +98,6 @@ namespace TechburnyStore.Core.Domain
 
             base.OnModelCreating(modelBuilder);
         }
-        */
+        
     }
 }
