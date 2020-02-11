@@ -1,5 +1,5 @@
 cls
-set server=(local)
+set server=.
 set database=TechburnyStore
 sqlcmd -S %server% -i "00_Database.sql"
 sqlcmd -S %server% -d %database% -i "01_Schemas.sql"
